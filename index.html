@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Dice Roller</title>
+  </head>
+  <body>
+    <div id="bg">
+      <div id="content">
+        <h1 id="title">Draw!</h1>
+        <div id="grid-container">
+          <div class="item">
+            <h4>Player 1</h4>
+            <div class="dice">
+              <div id="dice-dot-grid-container">
+                <div class="dot" id="dot-1"></div>
+                <div class="dot" id="dot-2"></div>
+                <div class="dot" id="dot-3"></div>
+                <div class="dot" id="dot-4"></div>
+                <div class="dot" id="dot-5"></div>
+                <div class="dot" id="dot-6"></div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <h4>Player 2</h4>
+            <div id="dice-value">4</div>
+            <div class="dice">
+              <div id="dice-dot-grid-container">
+                <div class="dot" id="dot-1"></div>
+                <div class="dot" id="dot-2"></div>
+                <div class="dot" id="dot-3"></div>
+                <div class="dot" id="dot-4"></div>
+                <div class="dot" id="dot-5"></div>
+                <div class="dot" id="dot-6"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" value="click" onclick="diceOutput()">Roll</button>
+      </div>
+    </div>
+    <script src="index.js" charset="UTF-8"></script>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+:root {
+  --primary-1: #3d550c;
+  --primary-2: #81b622;
+  --primary-3: #59981a;
+  --secondary: #ecf87f;
+  --white: #fff;
+  --black: #000;
+  --grey: #d0d0d0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#bg {
+  width: auto;
+  height: 100vh;
+  background-image: linear-gradient(45deg, var(--primary-1), var(--secondary));
+}
+
+#content {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 50px;
+  grid-row-gap: 10px;
+  padding: 10px;
+}
+
+.item {
+  width: 100%;
+}
+
+.dice {
+  background-color: var(--white);
+  border-radius: 1rem;
+  height: 5rem;
+  width: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* for all dot position */
+.dot {
+  margin-left: auto;
+  margin-right: auto;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: var(--black);
+}
+
+#dice-dot-grid-container {
+  height: -webkit-fill-available;
+  padding: 0.5rem;
+}
+
+.invisible {
+  display: none;
+}
+/* for 1 dice roll */
+/* #dice-dot-grid-container { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: -webkit-fill-available;
+    padding: 0.5rem;
+  } */
+
+/* for 2 dice roll, use all dot position */
+/* 
+#dot-1 {
+  grid-area: one;
+}
+#dot-2 {
+  grid-area: three;
+}
+#dice-dot-grid-container {
+  position: relative;
+  display: grid;
+  grid-template-areas: "one four five" "six two seven" "eight nine three";
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 1rem;  
+} */
+
+/* for 3 dice roll, use all dot position */
+/* 
+#dot-1 {
+  grid-area: one; 
+}
+#dot-2 {
+  grid-area: two; 
+}
+#dot-3 {
+  grid-area: three; 
+}
+#dice-dot-grid-container {
+  position: relative;
+  display: grid;
+  grid-template-areas: "one four five" "six two seven" "eight nine three";
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 1rem; 
+  height: -webkit-fill-available;
+}   */
+
+/* for 4 dice roll, use all dot position*/
+/* #dot-1 {
+  grid-area: one; 
+}
+#dot-2 {
+  grid-area: five; 
+}
+#dot-3 {
+  grid-area: three; 
+}
+#dot-4{ 
+  grid-area: eight; 
+}
+  #dice-dot-grid-container {
+    position: relative;
+  display: grid;
+  grid-template-areas: "one four five" "six two seven" "eight nine three";
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 1rem; 
+}    */
+
+/* for 5 dice roll, use custom dot position */
+/* .dot {
+  width: 10px;
+  height: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 100%;
+  background-color: var(--black);
+}
+#dot-1 {
+  grid-area: one;
+}
+#dot-2 {
+  grid-area: two;
+}
+#dot-3 {
+  grid-area: three;
+}
+#dot-4 {
+  grid-area: eight;
+}
+#dot-5 {
+  grid-area: five;
+}
+#dice-dot-grid-container {
+  position: relative;
+  display: grid;
+  align-items: center;
+  grid-template-areas: "one four five" "six two seven" "eight nine three";
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 1rem; 
+  height: -webkit-fill-available;
+} */
+
+/* for 6 dice roll, use custom dot position */
+#dice-dot-grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 1rem;
+}
