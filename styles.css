@@ -1,11 +1,14 @@
 :root {
-  --primary-1: #3d550c;
-  --primary-2: #81b622;
-  --primary-3: #59981a;
-  --secondary: #ecf87f;
+  --primary-1: #161616;
+  --secondary: #3e3636;
+  --dark-red1: #800000;
+  --dark-red2: #d72323;
   --white: #fff;
+  --cream: #f5eded;
   --black: #000;
   --grey: #d0d0d0;
+  --rotation1: rotate(22deg);
+  --rotation2: rotate(22deg);
 }
 
 body {
@@ -39,12 +42,21 @@ body {
 }
 
 .dice {
-  background-color: var(--white);
+  background-image: linear-gradient(45deg, var(--dark-red1), var(--dark-red2));
   border-radius: 1rem;
   height: 5rem;
   width: 5rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+.dot {
+  margin-left: auto;
+  margin-right: auto;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-image: linear-gradient(45deg, var(--cream), var(--white));
 }
 
 /* set default dice face */
@@ -83,15 +95,6 @@ body {
   grid-area: two;
 }
 
-.dot {
-  margin-left: auto;
-  margin-right: auto;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background-color: var(--black);
-}
-
 #dice-dot-grid-container-p1,
 #dice-dot-grid-container-p2 {
   position: relative;
@@ -105,4 +108,71 @@ body {
 
 .invisible {
   display: none;
+}
+
+#dice-p1 {
+  transform: var(--rotation1);
+}
+
+#dice-p2 {
+  transform: var(--rotation2);
+}
+
+.flipAnimation1 {
+  backface-visibility: visible !important;
+  animation: flip1 0.5s ease;
+}
+.flipAnimation2 {
+  backface-visibility: visible !important;
+  animation: flip2 0.6s ease;
+}
+
+@keyframes flip1 {
+  0% {
+    transform: perspective(400px) rotateY(0) var(--rotation1);
+    animation-timing-function: ease-out;
+  }
+  40% {
+    transform: perspective(400px) translateZ(150px) rotateY(170deg)
+      var(--rotation1);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1)
+      var(--rotation1);
+    animation-timing-function: ease-in;
+  }
+  80% {
+    transform: perspective(400px) rotateY(360deg) scale(0.95) var(--rotation1);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: perspective(400px) scale(1) var(--rotation1);
+    animation-timing-function: ease-in;
+  }
+}
+
+@keyframes flip2 {
+  0% {
+    transform: perspective(400px) rotateY(0) var(--rotation2);
+    animation-timing-function: ease-out;
+  }
+  40% {
+    transform: perspective(400px) translateZ(150px) rotateY(170deg)
+      var(--rotation2);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1)
+      var(--rotation2);
+    animation-timing-function: ease-in;
+  }
+  80% {
+    transform: perspective(400px) rotateY(360deg) scale(0.95) var(--rotation2);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: perspective(400px) scale(1) var(--rotation2);
+    animation-timing-function: ease-in;
+  }
 }
